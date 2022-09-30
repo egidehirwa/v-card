@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #a07644;
+    --secondary-bg-color: #ffffff;
+    --text-color: white;
+}
+
+/* section {
+    height: 100vh;
+    width: 100%;
+    background: var(--secondary-bg-color)
+} */
+
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.hambuger-menu {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+    width: 36px;
+}
+
+.hero-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--main-bg-color);
+    color: var(--text-color);
+    height: 100%;
+    width: 35%;
+    padding: 50px 5%;
+}
+
+.hero-content {
+    display: flex;
+    background: var(--secondary-bg-color);
+    padding: 50px 5%;
+    height: 100%;
+    width: 65%;
+    position: relative;
+
+}
+
+.hero-content__description {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.special-title {
+    display: block;
+    color: var(--main-bg-color);
+    font-size: 48px;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+.margin-top__text {
+    margin-top: 20px;
+}
+
+.hero-content__title {
+    padding: 5px 10px;
+    background: #cdcdcd;
+    display: inline-block;
+    color: rgb(50, 50, 50);
+    border-radius: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button {
+    color: white;
+    background: var(--main-bg-color);
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.button-outline {
+    color: var(--main-bg-color);
+    background: transparent;
+    border: 1px solid var(--main-bg-color);
+}
+
+.logo {
+    width: 130px;
+}
+
+.hero-image {
+    width: 400px;
+    height: 550px;
+    object-fit: cover;
+    position: absolute;
+    left: -200px;
+    top: 150px;
+    border: 5px solid var(--secondary-bg-color);
+}
+
+.hero-details-container {
+    margin-bottom: 20px;
+}
+
+.hero-details__heading {
+    font-weight: bold;
+}
+
+.hero-content__button-wrapper {
+    margin-top: 40px;
+    display: flex; 
+    gap: 20px;
+}
+
+.hero-content__intro {
+    max-width: 500px;
+}
