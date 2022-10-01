@@ -10,17 +10,15 @@
     --text-color: white;
 }
 
-/* section {
-    height: 100vh;
-    width: 100%;
-    background: var(--secondary-bg-color)
-} */
-
 .container {
     display: flex;
     height: 100vh;
     position: relative;
 }
+
+
+/* Content on the left side */
+
 
 .hambuger-menu {
     position: absolute;
@@ -41,6 +39,18 @@
     padding: 50px 5%;
 }
 
+.hero-details-container {
+    margin-bottom: 20px;
+}
+
+.hero-details__heading {
+    font-weight: bold;
+}
+
+
+/* Content on the right side */
+
+
 .hero-content {
     display: flex;
     background: var(--secondary-bg-color);
@@ -58,6 +68,10 @@
     justify-content: center;
 }
 
+.mini-title {
+    animation: moveInTop 1s ease-in-out;
+}
+
 .special-title {
     display: block;
     color: var(--main-bg-color);
@@ -65,14 +79,18 @@
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 18px;  
+
+    animation: moveInTop 1s ease-in-out;
 }
 
-.margin-top__text {
+.hero-content__text {
     margin-top: 20px;
+
+    animation: moveInRight 1s ease-in-out;
 }
 
-.hero-content__title {
+.hero-content__tag {
     padding: 5px 10px;
     background: #cdcdcd;
     display: inline-block;
@@ -80,6 +98,8 @@ h1 {
     border-radius: 30px;
     font-size: 14px;
     margin-top: 10px;
+
+    animation: fadeIn 1s ease-in-out;
 }
 
 a {
@@ -93,12 +113,16 @@ a {
     padding: 15px 30px;
     border-radius: 40px;
     font-weight: bold;
+
+    animation: moveInBottom 1s ease-in-out;
 }
 
 .button-outline {
     color: var(--main-bg-color);
     background: transparent;
     border: 1px solid var(--main-bg-color);
+
+    animation: moveInBottom 1.2s ease-in-out;
 }
 
 .logo {
@@ -113,14 +137,8 @@ a {
     left: -200px;
     top: 150px;
     border: 5px solid var(--secondary-bg-color);
-}
 
-.hero-details-container {
-    margin-bottom: 20px;
-}
-
-.hero-details__heading {
-    font-weight: bold;
+    animation: moveInLeft 1s ease-in-out;
 }
 
 .hero-content__button-wrapper {
@@ -131,4 +149,65 @@ a {
 
 .hero-content__intro {
     max-width: 500px;
+}
+
+
+
+/* Animation  */
+
+
+@keyframes fadeIn {
+    0% {
+        scale: 0%;
+    }
+
+    100% {
+        scale: 100%;
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        scale: 90%;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        scale: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
