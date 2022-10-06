@@ -10,59 +10,105 @@
     --text-color: white;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 .container {
     display: flex;
     height: 100vh;
     position: relative;
 }
 
+.hamburger {
+    position: absolute;
+    right: 4rem;
+    top: 5rem;
+    width: 3.6rem;
+    z-index: 10;
+    font-size: 3.6rem;
+    cursor: pointer;
+}
 
 /* Content on the left side */
 
 
-.hambuger-menu {
-    position: absolute;
-    right: 40px;
-    top: 50px;
-    width: 36px;
-    cursor: pointer;
-}
 
-.hero-details {
+.hero-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: var(--main-bg-color);
     color: var(--text-color);
     height: 100%;
-    width: 35%;
-    padding: 50px 5%;
+    width: 20%;
+    padding: 5rem 5%;
 }
 
-.hero-details-container {
-    margin-bottom: 20px;
+.hero-left-container {
+    margin-bottom: 2rem;
 }
 
-.hero-details__heading {
+.hero-left__heading {
+    font-size: 1.6rem;
     font-weight: bold;
 }
+
+.hero-left__text {
+    font-size: 1.4rem;
+}
+
+
+
+/* Content in the center */
+
+.hero-center {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+    display: flex;
+    background: rgb(160,118,68);
+    background: linear-gradient(90deg, rgba(160,118,68,1) 35%, rgba(255,255,255,1) 35%);
+}
+
+/* Didn't need to use these items - found a workaround using background gradients */
+
+/* .block-top, .block-bottom {
+    background-color: var(--main-bg-color);
+    width: 50%;
+    height: 15%;
+} */
+
+.hero-image {
+    background: url(./images/Spectacle\ Nyashya\ na\ Baba.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 75%;
+    width: 100%;
+    border: 5px solid var(--secondary-bg-color);
+    margin: auto 0;
+
+    animation: moveInLeft 1s ease-in-out;
+}
+
 
 
 /* Content on the right side */
 
-
-.hero-content {
+.hero-right {
     display: flex;
+    flex-direction: column;
     background: var(--secondary-bg-color);
-    padding: 50px 5%;
+    padding: 3rem;
+    padding-left: 0;
     height: 100%;
-    width: 65%;
-    position: relative;
+    width: 45%;
+    justify-content: center;
 
 }
 
-.hero-content__description {
-    margin-left: 200px;
+.hero-right__description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,29 +121,30 @@
 .special-title {
     display: block;
     color: var(--main-bg-color);
-    font-size: 48px;
+    font-size: 4.8rem;
 }
 
 h1 {
-    font-size: 18px;  
+    font-size: 1.8rem;  
 
     animation: moveInTop 1s ease-in-out;
 }
 
-.hero-content__text {
-    margin-top: 20px;
+.hero-right__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
 
     animation: moveInRight 1s ease-in-out;
 }
 
-.hero-content__tag {
-    padding: 5px 10px;
+.hero-right__tag {
+    padding: 0.5rem 1rem;
     background: #cdcdcd;
     display: inline-block;
     color: rgb(50, 50, 50);
-    border-radius: 30px;
-    font-size: 14px;
-    margin-top: 10px;
+    border-radius: 3rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
 
     animation: fadeIn 1s ease-in-out;
 }
@@ -107,25 +154,35 @@ a {
     color: #fff;
 }
 
+.socials-container {
+    display: flex;
+    gap: 1rem;
+}
+
+i {
+    font-size: 1.6rem;
+}
+
 .button {
     color: white;
     background: var(--main-bg-color);
-    padding: 15px 30px;
-    border-radius: 40px;
+    padding: 1.4rem 2.8rem;
+    border-radius: 4rem;
     font-weight: bold;
+    font-size: 1.5rem;
 
     animation: moveInBottom 1s ease-in-out; 
     transition: all 0.2s;
 }
 
 .button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgb(0, 0, 0, 0.2);
 }
 
 .button:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
 }
 
 .button-outline {
@@ -137,34 +194,29 @@ a {
 }
 
 .logo {
-    width: 130px;
+    width: 13rem;
 }
 
-.hero-image {
-    width: 400px;
-    height: 550px;
-    object-fit: cover;
-    position: absolute;
-    left: -200px;
-    top: 150px;
-    border: 5px solid var(--secondary-bg-color);
 
-    animation: moveInLeft 1s ease-in-out;
-}
-
-.hero-content__button-wrapper {
-    margin-top: 40px;
+.hero-right__button-wrapper {
+    margin-top: 4rem;
     display: flex; 
-    gap: 20px;
+    gap: 2rem;
 }
 
-.hero-content__intro {
-    max-width: 500px;
+.hero-right__intro {
+    max-width: 50rem;
+}
+
+    /* Reusable spacing */
+
+.margin-bottom-sm {
+    margin-bottom: 0.5rem;
 }
 
 
 
-/* Animation  */
+/* Animations */
 
 
 @keyframes fadeIn {
@@ -222,3 +274,14 @@ a {
         transform: translateX(0);
     }
 }
+
+
+    /* Responsive */
+
+@media screen and (max-width: 796px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

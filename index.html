@@ -4,49 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egide Hirwa - Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <meta name="description" content="This is my virtual card">
     <link rel="stylesheet" href="./style.css">
+    <title>Egide Hirwa - Web Developer</title>
 </head>
 <body>
     <section class="container">
-        <div class="hero-details">
+        <div class="hero-left">
             <div>
                 <img class="logo" src="./images/logoipsum.svg" alt="Ballet Inyange's Logo">
             </div>
             <div>
-                <div class="hero-details-container">
-                    <p class="hero-details__heading">Email</p>
-                    <a href="mailto:inyange@gmail.com" class="hero-details__text" target="_blank">inyange@gmail.com</a>
+                <div class="hero-left-container">
+                    <p class="hero-left__heading margin-bottom-sm">Email</p>
+                    <a href="mailto:inyange@gmail.com" class="hero-left__text" target="_blank">inyange@gmail.com</a>
                 </div>
-                <div class="hero-details-container">
-                    <p class="hero-details__heading">Phone</p>
-                    <a class="hero-details__text" href="tel:+33465878987" target="_blank">+33465878987</a>
+                <div class="hero-left-container">
+                    <p class="hero-left__heading margin-bottom-sm">Phone</p>
+                    <a class="hero-left__text" href="tel:+33465878987" target="_blank">+33465878987</a>
                 </div>
-                <div class="hero-details-container">
-                    <p class="hero-details__heading">Socials</p>
-                    <div>
-                        <img src="" alt="">
+                <div class="hero-left-container">
+                    <p class="hero-left__heading margin-bottom-sm" >Socials</p>
+                    <div class="socials-container">
+                        <a href="https://facebook.com/balletinyange" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com/balletinyange" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/balletinyange" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="hero-content">
-            <img class="hero-image" src="./images/Spectacle Nyashya na Baba.jpeg" alt="Egide Hirwa's profile image">
-            <div class="hero-content__description">
-                <div class="hero-content__intro">
+        <div class="hero-center">
+            <div class="block-top"></div>
+            <div class="hero-image" alt="Egide Hirwa's profile image"></div>
+            <div class="block-bottom"></div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-right__description">
+                <div class="hero-right__intro">
                     <h1> <span class="mini-title">Le Ballet Inyange vous présente</span> <span class="special-title">Nyashya na Baba</span></h1>
-                    <p class="hero-content__tag">Spectacle de danse traditionnelle rwandaise</p>
-                    <p class="hero-content__text">Nyashya na Baba est un conte d'un frère et sa soeur, tous les deux pourchassés par un monstre qui a dévoré leurs parent. Suivez leur parcours de survie et comment ils comptent se défaire de ce monstre qui rôde toujours.</p>
+                    <p class="hero-right__tag">Spectacle de danse traditionnelle rwandaise</p>
+                    <p class="hero-right__text">Nyashya na Baba est un conte d'un frère et sa soeur, tous les deux pourchassés par un monstre qui a dévoré leurs parent. Suivez leur parcours de survie et comment ils comptent se défaire de ce monstre qui rôde toujours.</p>
                 </div>
-                <div class="hero-content__button-wrapper">
+                <div class="hero-right__button-wrapper">
                     <a href="https://go.inyange.com/nyashya-na-baba " class="button" target="_blank">En Savoir Plus</a>
                     <a href="https://go.inyange.com/billetterie" class="button button-outline" target="_blank">Acheter Le Ticket</a>
                 </div>
             </div>
+            <i class="fa-sharp fa-solid fa-bars hamburger"></i>
         </div>
-        <img src="./images/hambuger menu.webp" alt="Hamburger menu" class="hambuger-menu">
+<!--         <a href="#" class="hamburger"><i class="fa-sharp fa-solid fa-bars"></i></a> -->
     </section>
 </body>
 </html>
